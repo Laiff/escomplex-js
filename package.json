@@ -27,7 +27,7 @@
   "dependencies": {
     "check-types": "2.1.x",
     "escomplex": "0.2.5",
-    "escomplex-ast-moz": "0.1.x",
+    "escomplex-ast-moz": "git+https://github.com/IOKI/escomplex-ast-moz.git",
     "espree": "^1.6.0"
   },
   "devDependencies": {
