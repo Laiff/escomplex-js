@@ -2,82 +2,14 @@
 
 'use strict';
 
-var check, espree, walker, escomplex;
+var check, babel, walker, escomplex;
 
 check = require('check-types');
-espree = require('espree');
+babel = require('babel-eslint');
 walker = require('escomplex-ast-moz');
 escomplex = require('escomplex');
 
 exports.analyse = analyse;
-exports.ecmaFeatures = {
- 
-        // enable parsing of arrow functions 
-        arrowFunctions: true,
- 
-        // enable parsing of let/const 
-        blockBindings: true,
- 
-        // enable parsing of destructured arrays and objects 
-        destructuring: true,
- 
-        // enable parsing of regular expression y flag 
-        regexYFlag: true,
- 
-        // enable parsing of regular expression u flag 
-        regexUFlag: true,
- 
-        // enable parsing of template strings 
-        templateStrings: true,
- 
-        // enable parsing of binary literals 
-        binaryLiterals: true,
- 
-        // enable parsing of ES6 octal literals 
-        octalLiterals: true,
- 
-        // enable parsing unicode code point escape sequences 
-        unicodeCodePointEscapes: true,
- 
-        // enable parsing of default parameters 
-        defaultParams: true,
- 
-        // enable parsing of rest parameters 
-        restParams: true,
- 
-        // enable parsing of for-of statement 
-        forOf: true,
- 
-        // enable parsing computed object literal properties 
-        objectLiteralComputedProperties: true,
- 
-        // enable parsing of shorthand object literal methods 
-        objectLiteralShorthandMethods: true,
- 
-        // enable parsing of shorthand object literal properties 
-        objectLiteralShorthandProperties: true,
- 
-        // Allow duplicate object literal properties (except '__proto__') 
-        objectLiteralDuplicateProperties: true,
- 
-        // enable parsing of generators/yield 
-        generators: true,
- 
-        // enable parsing spread operator 
-        spread: true,
- 
-        // enable parsing classes 
-        classes: true,
- 
-        // enable parsing of modules 
-        modules: true,
- 
-        // enable React JSX parsing 
-        jsx: true,
- 
-        // enable return in global scope 
-        globalReturn: true
-};
 
 function analyse (source, options) {
     if (check.array(source)) {
@@ -102,7 +34,7 @@ function analyseSources (sources, options) {
 }
 
 function getSyntaxTree (source) {
-    return espree.parse(source, { loc: true, ecmaFeatures: exports.ecmaFeatures });
+    return babel.parse(source);
 }
 
 function performAnalysis (ast, options) {

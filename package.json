@@ -1,15 +1,15 @@
 {
   "name": "escomplex-js",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Javascript wrapping library for escomplex.",
   "homepage": "https://github.com/philbooth/escomplex-js",
   "bugs": "https://github.com/philbooth/escomplex-js/issues",
   "license": "MIT",
   "author": "Phil Booth <pmbooth@gmail.com> (https://github.com/philbooth)",
-  "main": "./src",
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/philbooth/escomplex-js.git"
+    "url": "https://github.com/Laiff/escomplex-js.git"
   },
   "keywords": [
     "escomplex",
@@ -25,10 +25,10 @@
     "esprima"
   ],
   "dependencies": {
+    "babel-eslint": "4.1.6",
     "check-types": "2.1.x",
     "escomplex": "0.2.5",
-    "escomplex-ast-moz": "git+https://github.com/IOKI/escomplex-ast-moz.git",
-    "espree": "^1.6.0"
+    "escomplex-ast-moz": "git+https://github.com/IOKI/escomplex-ast-moz.git"
   },
   "devDependencies": {
     "jshint": "2.5.x",
