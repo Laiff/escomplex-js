@@ -18,7 +18,11 @@ suite('index:', function () {
     setup(function () {
         log = {};
         walker = {};
-        mockery.enable({ useCleanCache: true });
+        mockery.enable({
+          useCleanCache: true,
+          warnOnReplace: false,
+          warnOnUnregistered: false
+        });
         mockery.registerMock('espree', {
             parse: spooks.fn({
                 name: 'espree.parse',

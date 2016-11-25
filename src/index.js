@@ -12,6 +12,9 @@ escomplex = require('escomplex');
 exports.analyse = analyse;
 
 function analyse (source, options) {
+
+    source = source || ''
+
     if (check.array(source)) {
         return analyseSources(source, options);
     }
