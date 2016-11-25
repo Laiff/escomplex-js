@@ -28,7 +28,7 @@
     "eslint": "^3.0.0"
   },
   "dependencies": {
-    "babel-eslint": "^6.0.0",
+    "babel-eslint": "^7.0.0",
     "check-types": "2.1.x",
     "escomplex": "0.2.5",
     "escomplex-ast-moz": "git+https://github.com/IOKI/escomplex-ast-moz.git"
